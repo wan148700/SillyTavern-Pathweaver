@@ -35,8 +35,8 @@
                 </h4>
 
                 <select id="pw_source" class="text_pole pw_select">
-                    <option value="default">Default (Main API)</option>
-                    <option value="profile">Connection Profile</option>
+                    <option value="default">默认（主API）</option>
+                    <option value="profile">连接配置</option>
                     <option value="ollama">Ollama (Local)</option>
                     <option value="openai">OpenAI Compatible</option>
                 </select>
@@ -58,7 +58,7 @@
                         <i class="fa-solid fa-terminal"></i> Ollama
                     </div>
                     <input id="pw_ollama_url" type="text" class="text_pole" placeholder="http://localhost:11434"
-                        title="Ollama API endpoint">
+                        title="Ollama 接口地址">
                     <select id="pw_ollama_model" class="text_pole pw_select"></select>
                     <div id="pw_ollama_status" class="pw_provider_status"></div>
                 </div>
@@ -69,16 +69,16 @@
                         <i class="fa-solid fa-cloud"></i> OpenAI Compatible
                     </div>
                     <select id="pw_openai_preset" class="text_pole pw_select">
-                        <option value="custom">Custom</option>
+                        <option value="custom">自定义</option>
                         <option value="lmstudio">LM Studio (:1234)</option>
                         <option value="kobold">KoboldCPP (:5001)</option>
                         <option value="textgen">TextGenWebUI (:5000)</option>
                         <option value="vllm">vLLM (:8000)</option>
                     </select>
                     <input id="pw_openai_url" type="text" class="text_pole" placeholder="http://localhost:1234/v1"
-                        title="API endpoint URL">
+                        title="API 地址">
                     <input id="pw_openai_model" type="text" class="text_pole" placeholder="Model name"
-                        title="Model identifier">
+                        title="模型标识">
                     <input id="pw_openai_key" type="password" class="text_pole" placeholder="API Key (Optional)"
                         title="API Key">
                 </div>
@@ -138,7 +138,7 @@
                             <i class="fa-solid fa-list-ol"></i> Suggestions
                         </label>
                         <select id="pw_suggestions_count" class="text_pole pw_select"
-                            title="Number of suggestions to generate">
+                            title="生成建议的数量">
                             <option value="2">2</option>
                             <option value="4">4</option>
                             <option value="6" selected>6</option>
@@ -164,9 +164,9 @@
                             <i class="fa-solid fa-text-width"></i> Length
                         </label>
                         <select id="pw_suggestion_length" class="text_pole pw_select"
-                            title="Suggestion description length">
-                            <option value="short">Short (2-3 sentences)</option>
-                            <option value="long">Long (4-6 sentences)</option>
+                            title="建议描述长度">
+                            <option value="short">短（2-3句）</option>
+                            <option value="long">长（4-6句）</option>
                         </select>
                     </div>
                     <div></div>
@@ -175,7 +175,7 @@
                 <label class="checkbox_label pw_checkbox_row pw_stream_row" for="pw_stream_suggestions"
                     style="margin-top: 8px;">
                     <input id="pw_stream_suggestions" type="checkbox" class="checkbox"
-                        title="Stream cards as they generate">
+                        title="生成时实时流式显示">
                     <span><i class="fa-solid fa-stream"></i> Stream suggestions</span>
                 </label>
                 <p class="pw_setting_hint" style="margin: 4px 0 0 0; font-size: 0.8rem; opacity: 0.85;">
@@ -187,7 +187,7 @@
                 <label class="checkbox_label pw_checkbox_row pw_stream_row" for="pw_reasoning_mode"
                     style="margin-top: 12px;">
                     <input id="pw_reasoning_mode" type="checkbox" class="checkbox"
-                        title="Enable for reasoning models like DeepSeek">
+                        title="为推理模型（如DeepSeek）启用">
                     <span><i class="fa-solid fa-brain"></i> Reasoning Mode</span>
                 </label>
                 <p class="pw_setting_hint" style="margin: 4px 0 0 0; font-size: 0.8rem; opacity: 0.85;">
@@ -202,7 +202,7 @@
                         </label>
                         <input id="pw_max_output_tokens" type="number" class="text_pole" value="16384" min="512"
                             max="128000" step="512" style="width: 100%;"
-                            title="Maximum tokens for reasoning model output">
+                            title="推理模型最大输出token">
                     </div>
                     <div></div>
                 </div>
@@ -251,8 +251,8 @@
             <!-- Surprise Me Section -->
             <div class="pw_section">
                 <h4 class="pw_section_title">
-                    <i class="fa-solid fa-wand-sparkles"></i> Surprise Me
-                    <span class="pw_setting_tooltip_icon" title="Surprise Me secretly injects an AI-generated suggestion into the chat context a set number of messages before it fires. Pick a style, and Pathweaver will quietly arm a hidden prompt. When the countdown hits, the suggestion appears naturally — like the story took an unexpected turn on its own.">?</span>
+                    <i class="fa-solid fa-wand-sparkles"></i> 给我惊喜
+                    <span class="pw_setting_tooltip_icon" title="「给我惊喜」会提前若干条消息，把一条AI生成的建议悄悄埋进上下文。选个风格，Pathweaver就悄悄上膛一条隐藏提示。倒计时归零时，建议自然浮现——就像剧情自己拐了个弯。">?</span>
                 </h4>
 
                 <label class="checkbox_label pw_checkbox_row" for="pw_surprise_endless">
@@ -321,7 +321,7 @@
                 <details id="pw_surprise_queue_accordion" class="pw_surprise_queue_accordion" style="display:none; margin-top: 12px;">
                     <summary class="pw_surprise_queue_summary">
                         <i class="fa-solid fa-list-check"></i>
-                        <span id="pw_surprise_queue_label">Armed surprises</span>
+                        <span id="pw_surprise_queue_label">已埋伏笔</span>
                         <i class="fa-solid fa-chevron-down pw_surprise_queue_chevron"></i>
                     </summary>
                     <ul id="pw_surprise_queue_list" class="pw_surprise_queue_list"></ul>
@@ -347,9 +347,9 @@
                             <i class="fa-solid fa-text-height"></i> Font Size
                         </label>
                         <select id="pw_font_size" class="text_pole pw_select">
-                            <option value="small">Small</option>
+                            <option value="small">小</option>
                             <option value="default" selected>Default</option>
-                            <option value="large">Large</option>
+                            <option value="large">大</option>
                         </select>
                     </div>
                     <div>
@@ -357,7 +357,7 @@
                             <i class="fa-solid fa-up-down"></i> Bar Height
                         </label>
                         <select id="pw_bar_height" class="text_pole pw_select">
-                            <option value="compact">Compact</option>
+                            <option value="compact">紧凑</option>
                             <option value="default" selected>Default</option>
                             <option value="max">Max</option>
                         </select>
@@ -370,7 +370,7 @@
                     </label>
                     <select id="pw_bar_title_font" class="text_pole pw_select pw_title_font_select"
                         style="width: 100%;">
-                        <option value="none" style="font-family: inherit">None (hidden)</option>
+                        <option value="none" style="font-family: inherit">无（隐藏）</option>
                         <option value="default" selected style="font-family: 'Crimson Text', Georgia, serif">Default
                         </option>
                         <optgroup label="Serif">

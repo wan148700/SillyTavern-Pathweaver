@@ -29,3 +29,7 @@ GUIDELINES:
 	- Titles should be under 8 words.
 	- Do NOT include numbering or preamble.
 	- Do NOT use markdown in titles.
+
+<language>
+- 所有建议（标题与描述）必须用简体中文输出，文风贴近中文小说语感。
+</language>

@@ -23,3 +23,7 @@ GUIDELINES:
 	- **Tone**: Match the genre and tone of the current story (e.g., if it's dark, offer dark suggestions; if comedic, offer funny ones).
 	- Do NOT include numbering or preamble.
 	- Do NOT wrap titles in asterisks.
+
+<language>
+- 所有建议（标题与描述）必须用简体中文输出，文风贴近中文小说语感。
+</language>

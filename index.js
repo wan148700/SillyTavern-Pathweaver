@@ -35,19 +35,19 @@
     // Built-in category definitions
     // Main toolbar categories
     const MAIN_CATEGORIES = {
-        context: { name: 'Context-Aware', icon: 'fa-compass', tooltip: 'Context-based suggestions', builtin: true },
-        twist: { name: 'Plot Twist', icon: 'fa-shuffle', tooltip: 'Unexpected plot twists', builtin: true },
-        character: { name: 'New Character', icon: 'fa-user-plus', tooltip: 'Introduce characters', builtin: true },
-        explicit: { name: 'Explicit', icon: 'fa-fire', tooltip: 'NSFW content', builtin: true, nsfw: true }
+        context: { name: '剧情推荐', icon: 'fa-compass', tooltip: '基于当前剧情的建议', builtin: true },
+        twist: { name: '剧情反转', icon: 'fa-shuffle', tooltip: '意想不到的转折', builtin: true },
+        character: { name: '新角色登场', icon: 'fa-user-plus', tooltip: '引入新人物', builtin: true },
+        explicit: { name: '限制级', icon: 'fa-fire', tooltip: '成人向内容', builtin: true, nsfw: true }
     };
 
     // Genre specific categories (Dropdown)
     const GENRE_CATEGORIES = {
-        action: { name: 'Action', icon: 'fa-person-running', tooltip: 'High energy and combat', builtin: true },
-        comedy: { name: 'Comedy', icon: 'fa-masks-theater', tooltip: 'Humor and levity', builtin: true },
-        fantasy: { name: 'Fantasy', icon: 'fa-hat-wizard', tooltip: 'Magic and wonder', builtin: true },
-        horror: { name: 'Horror', icon: 'fa-ghost', tooltip: 'Fear and dread', builtin: true },
-        mystery: { name: 'Mystery', icon: 'fa-magnifying-glass', tooltip: 'Puzzles and secrets', builtin: true },
+        action: { name: '动作', icon: 'fa-person-running', tooltip: '高能量与战斗', builtin: true },
+        comedy: { name: '喜剧', icon: 'fa-masks-theater', tooltip: '幽默与轻松', builtin: true },
+        fantasy: { name: '奇幻', icon: 'fa-hat-wizard', tooltip: '魔法与奇迹', builtin: true },
+        horror: { name: '恐怖', icon: 'fa-ghost', tooltip: '恐惧与不安', builtin: true },
+        mystery: { name: '悬疑', icon: 'fa-magnifying-glass', tooltip: '谜题与秘密', builtin: true },
         noir: { name: 'Noir', icon: 'fa-user-secret', tooltip: 'Shadows and intrigue', builtin: true },
         romance: { name: 'Romance', icon: 'fa-heart', tooltip: 'Love and affection', builtin: true },
         'sci-fi': { name: 'Sci-Fi', icon: 'fa-rocket', tooltip: 'Futurism and tech', builtin: true },
@@ -1551,7 +1551,7 @@ GUIDELINES:
             <button class="pw_cat_btn pw_director_btn"
                     data-category="director"
                     data-name="Director"
-                    title="Director: Take control of the story">
+                    title="导演模式：亲手掌控故事走向">
                 <i class="fa-solid fa-clapperboard"></i>
             </button>`;
 
@@ -1894,11 +1894,11 @@ GUIDELINES:
                         <div class="pw_director_view visible" id="pw_director_inputs_view">
                             <div class="pw_director_mode_switch">
                                 <div class="pw_mode_option ${directorMode === 'single_scene' ? 'active' : ''}" data-mode="single_scene">
-                                    <div class="pw_mode_title"><i class="fa-solid fa-film"></i> Single Scene</div>
+                                    <div class="pw_mode_title"><i class="fa-solid fa-film"></i> 单场景执导</div>
                                     <div class="pw_mode_desc">Combine inputs into one rich scene</div>
                                 </div>
                                 <div class="pw_mode_option ${directorMode === 'story_beats' ? 'active' : ''}" data-mode="story_beats">
-                                    <div class="pw_mode_title"><i class="fa-solid fa-list-check"></i> Story Beats</div>
+                                    <div class="pw_mode_title"><i class="fa-solid fa-list-check"></i> 故事节拍</div>
                                     <div class="pw_mode_desc">One suggestion per input beat</div>
                                 </div>
                             </div>
